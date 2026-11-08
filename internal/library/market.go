@@ -129,6 +129,8 @@ var featured = []MarketServer{
 		"Read, search and change Git repositories.", "uvx", []string{"mcp-server-git"}),
 	localServer("time", "Time", "Model Context Protocol", gh("modelcontextprotocol"), "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
 		"The current time anywhere, and conversions between time zones.", "uvx", []string{"mcp-server-time"}),
+	remoteServer("qcc-company", "企查查 QCC", "QCC", "https://agent.qcc.com/favicon.ico", "https://agent.qcc.com/mcp/company/stream",
+		"Search Chinese enterprise information, risk, intellectual property and historical data. Sign in with QCC; access and usage charges depend on your account.", true),
 	remoteServer("sentry", "Sentry", "Sentry", gh("getsentry"), "https://mcp.sentry.dev/mcp",
 		"Issues, errors and traces from Sentry, and Seer's analysis of them.", true),
 	remoteServer("linear", "Linear", "Linear", gh("linear"), "https://mcp.linear.app/mcp",
@@ -253,6 +255,7 @@ func selfCommand(s *Server) {
 
 // homepages are the remote servers' pages, where their endpoints aren't.
 var homepages = map[string]string{
+	"qcc-company":     "https://agent.qcc.com",
 	"context7":        "https://context7.com",
 	"github":          "https://github.com/github/github-mcp-server",
 	"deepwiki":        "https://deepwiki.com",

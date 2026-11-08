@@ -9,6 +9,12 @@ files in that agent's format, and takes back only what it wrote. Everything
 else in those files stays as it was. Package `internal/library` also gives
 agents RTK, a CLI that cuts shell output down before the model reads it.
 
+The featured QCC (企查查) entry uses one Streamable HTTP endpoint and the
+existing browser OAuth sign-in. It requires no API key in the market form.
+Its available enterprise and historical-data tools depend on the signed-in
+account; the preset does not pin a tool count or split the service into
+category endpoints. The MCP router retains its existing on-demand policy.
+
 ## Responsibilities and sources of truth
 
 | Part | Responsibility | Source |
